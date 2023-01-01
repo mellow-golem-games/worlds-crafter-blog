@@ -1,4 +1,5 @@
-import { getAllPostIds, getPostData } from '../libs/posts';
+import { getAllPostIds, getPostData } from '../../libs/posts';
+import Header from '../../components/Header';
 import Head from 'next/head';
 
 export default function Post({postData}: any) {
@@ -9,8 +10,12 @@ export default function Post({postData}: any) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <h1>Hello</h1>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <Header></Header>
+      <div className="Subpage" style={{marginTop: "64px"}}>
+        <a className="reverse dark" href="/">{"<- Back To news"}</a> 
+        <h1 style={{marginTop: "24px"}}>{postData.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </div>
     </div>
   );
 }

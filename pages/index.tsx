@@ -24,18 +24,20 @@ export default function Home({ allPostsData }: any) {
       </Head>
       <Header />
 
-      <h1 style={{marginTop: "124px"}}>News And Updates</h1>
+      <div className="Subpage">
+        <h1 style={{marginTop: "64px"}}>News And Updates</h1>
 
-      <div>
-        {allPostsData.map(({ title }: any) => {
-          return (
-            <a href="/news/release-1.0.0" className="reverse dark">
-              <div className="News__post"><h4>Release 1.0.0</h4>
-                <p style={{marginBottom: "8px"}}>September 20, 2022</p>
-                <p>Custom Entities</p>
-              </div>
-            </a>)
-        })}
+        <div>
+          {allPostsData.map(({ title }: any) => {
+            return (
+              <a href="/news/release-1.0.0" className="reverse dark">
+                <div className="News__post"><h4>Release 1.0.0</h4>
+                  <p style={{marginBottom: "8px"}}>September 20, 2022</p>
+                  <p>Custom Entities</p>
+                </div>
+              </a>)
+          })}
+        </div>
       </div>
 
 
