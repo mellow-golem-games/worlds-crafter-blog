@@ -857,6 +857,9 @@ select {
   color: white;
   padding: 30px 12px;
   padding-bottom: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .Home__footer__upper {
   display: flex;

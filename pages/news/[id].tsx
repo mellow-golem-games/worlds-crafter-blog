@@ -1,10 +1,10 @@
 import { getAllPostIds, getPostData } from '../../libs/posts';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import Head from 'next/head';
 
 export default function Post({postData}: any) {
 
-  console.log(postData)
   return (
     <div>
       <Head>
@@ -16,6 +16,7 @@ export default function Post({postData}: any) {
         <h1 style={{marginTop: "24px"}}>{postData.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </div>
+      <Footer />
     </div>
   );
 }

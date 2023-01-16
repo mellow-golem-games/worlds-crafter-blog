@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { getSortedPostsData } from '../libs/posts';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -40,7 +41,7 @@ export default function Home({ allPostsData }: any) {
         </div>
       </div>
 
-
+      <Footer />
     </div>
   )
 }
