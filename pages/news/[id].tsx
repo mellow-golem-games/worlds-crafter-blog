@@ -4,17 +4,20 @@ import Footer from '../../components/Footer';
 import Head from 'next/head';
 
 export default function Post({postData}: any) {
-
+  console.log(postData)
   return (
     <div>
       <Head>
         <title>{postData.title}</title>
+        <meta name="description" content={postData.meta_desc} />
       </Head>
       <Header></Header>
-      <div className="Subpage" style={{marginTop: "64px"}}>
+      <div className="Subpage" style={{marginTop: "64px", minHeight: "90vh"}}>
         <a className="reverse dark" href="/">{"<- Back To news"}</a> 
-        <h1 style={{marginTop: "24px"}}>{postData.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <article>
+          <h1 style={{marginTop: "24px"}}>{postData.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
       </div>
       <Footer />
     </div>

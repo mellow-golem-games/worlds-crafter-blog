@@ -860,6 +860,7 @@ select {
   position: absolute;
   left: 0;
   bottom: 0;
+  box-sizing: border-box;
 }
 .Home__footer__upper {
   display: flex;
