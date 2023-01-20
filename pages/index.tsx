@@ -17,7 +17,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }: any) {
   return (
-    <div className={styles.container}>
+    <div className="Home__container">
       <Head>
         <title>Worlds Crafter - News</title>
         <meta name="description" content="Worlds Crafter News and Blog" />

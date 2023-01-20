@@ -3299,6 +3299,11 @@ select {
   border-bottom: 1px solid #55ADEB;
 }
 
+.NewsPostPage, .Home__container {
+  position: relative;
+  padding-bottom: 275px;
+}
+
 .NewsPostPage .Subpage img {
   margin: 24px 0;
   max-width: 400px;
