@@ -6,7 +6,7 @@ import Head from 'next/head';
 export default function Post({postData}: any) {
   console.log(postData)
   return (
-    <div>
+    <div className="NewsPostPage">
       <Head>
         <title>{postData.title}</title>
         <meta name="description" content={postData.meta_desc} />
