@@ -30,9 +30,8 @@ export default function Home({ allPostsData }: any) {
 
         <div>
           {allPostsData.map(({ title, meta_desc, date, id }: any) => {
-
             return (
-              <a href={`/news/${id}`} className="reverse dark">
+              <a key={id} href={`/news/${id}`} className="reverse dark">
                 <div className="News__post"><h4>{title}</h4>
                   <p style={{marginBottom: "8px"}}>{date}</p>
                   <p>{meta_desc}</p>
