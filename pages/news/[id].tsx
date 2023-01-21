@@ -12,8 +12,10 @@ export default function Post({postData}: any) {
         <meta name="description" content={postData.meta_desc} />
       </Head>
       <Header></Header>
-      <div className="Subpage" style={{marginTop: "64px", minHeight: "90vh"}}>
-        <a className="reverse dark" href="/">{"<- Back To news"}</a> 
+      <div className="Subpage" style={{ minHeight: "90vh"}}>
+        <div style={{paddingTop: "24px"}} >
+          <a className="reverse dark" href="/">{"<- Back To news"}</a> 
+        </div>
         <article>
           <h1 style={{marginTop: "24px"}}>{postData.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
