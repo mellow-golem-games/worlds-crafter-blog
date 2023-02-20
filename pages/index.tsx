@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { getSortedPostsData } from '../libs/posts';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import { getSortedPostsData } from "../libs/posts";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -13,7 +13,6 @@ export async function getStaticProps() {
     },
   };
 }
-
 
 export default function Home({ allPostsData }: any) {
   return (
@@ -26,22 +25,24 @@ export default function Home({ allPostsData }: any) {
       <Header />
 
       <div className="Subpage">
-        <h1 style={{marginTop: "64px"}}>News And Updates</h1>
+        <h1 style={{ marginTop: "64px" }}>News And Updates</h1>
 
         <div>
           {allPostsData.map(({ title, meta_desc, date, id }: any) => {
             return (
               <a key={id} href={`/news/${id}`} className="reverse dark">
-                <div className="News__post"><h4>{title}</h4>
-                  <p style={{marginBottom: "8px"}}>{date}</p>
+                <div className="News__post">
+                  <h4>{title}</h4>
+                  <p style={{ marginBottom: "8px" }}>{date}</p>
                   <p>{meta_desc}</p>
                 </div>
-              </a>)
+              </a>
+            );
           })}
         </div>
       </div>
 
       <Footer />
     </div>
-  )
+  );
 }
