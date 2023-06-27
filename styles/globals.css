@@ -199,7 +199,7 @@ h5 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -3415,7 +3415,7 @@ select {
 
 .NewsPostPage .Subpage img {
   margin: 24px 0;
-  max-width: 400px;
+  max-width: 500px;
 }
 .NewsPostPage .Subpage h2 {
   margin-top: 48px;
@@ -3427,7 +3427,7 @@ select {
 }
 .NewsPostPage .Subpage p {
   margin-top: 16px;
-  line-height: 24px;
+  line-height: 32px;
 }
 .NewsPostPage .Subpage ul {
   margin-left: 24px;
